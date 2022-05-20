@@ -17,9 +17,21 @@ class DwarfMiner {
   }
 
   /**
+   * @returns { string } A list of items on the character represented as a string.
+   */
+  _items() {
+    let result = Object.entries(landon.items);
+    if (result.length > 0) {
+      return result.map(([name, amount]) => `${name} x ${amount}`).join(", ");
+    } else {
+      return "nothing";
+    }
+  }
+
+  /**
    * Controls experience gains, goals, and levels.
    *
-   * @param { number } experience The experience gained.
+   * @param experience The experience gained.
    */
   _experience(exp) {
     if (exp > 0) {
@@ -51,6 +63,15 @@ class DwarfMiner {
 
       this.items[preciousStone.item]++;
     }
+  }
+
+  /**
+   * Logs details at the end of a mining season.
+   */
+  end() {
+    console.log(
+      `You ended this season with ${_items()} at level ${this.level}.`
+    );
   }
 }
 
