@@ -20,7 +20,7 @@ class DwarfMiner {
    * @returns { string } A list of items on the character represented as a string.
    */
   _items() {
-    let result = Object.entries(landon.items);
+    let result = Object.entries(this.items);
     if (result.length > 0) {
       return result.map(([name, amount]) => `${name} x ${amount}`).join(", ");
     } else {
@@ -70,7 +70,7 @@ class DwarfMiner {
    */
   end() {
     console.log(
-      `You ended this season with ${_items()} at level ${this.level}.`
+      `You ended this season with ${this._items()} at level ${this.level}.`
     );
   }
 }
