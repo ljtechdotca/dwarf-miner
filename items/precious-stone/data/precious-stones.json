@@ -1,0 +1,14 @@
+{
+  "coal": {
+    "chance": 0.5,
+    "experience": 1
+  },
+  "gold": {
+    "chance": 0.01,
+    "experience": 100
+  },
+  "iron": {
+    "chance": 0.25,
+    "experience": 10
+  }
+}
